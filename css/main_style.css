@@ -1,0 +1,297 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*1. Background*/
+/*2. Font*/
+/*3. Button*/
+/*4. Accordian & Tabs*/
+/*5. Tables*/
+/*6. Typogrphy*/
+/*7. Border*/
+/*8. Spacer*/
+/*************************
+1. Mixin - Font Family
+*************************/
+/*************************
+2. Mixin - Box Shadow
+*************************/
+/*************************
+3. Mixin - Text field
+*************************/
+/*************************
+4. Mixin - Button
+*************************/
+/*************************
+5. Mixin - Border Radius
+*************************/
+/*************************
+6. Mixin - Gradient
+*************************/
+/*************************
+7. Mixin - Shapes - Circle
+*************************/
+/**************************************************
+8. Mixin - Shapes - Triangle - Up/Down/Left/Right
+**************************************************/
+/***********************************
+9. Mixin - Shapes - Diamond
+***********************************/
+/***********************************
+10. Mixin - Padding - TOP & Bottom
+***********************************/
+/***********************************
+11. Mixin - Default Box
+header{ @include default-box(#666, block, 10px); }
+***********************************/
+/* line 1, ../sass/base/_reset.scss */
+dl, ol, ul {
+  margin-bottom: 0;
+}
+
+/*************************
+1. Font Embedding
+*************************/
+/*1. @include font-face(Samplinal, fonts/Samplinal, 500, normal, eot woff2 woff);*/
+/* line 8, ../sass/base/_typography.scss */
+h1 {
+  color: red;
+  text-align: center;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em;
+}
+@font-face {
+  /* line 8, ../sass/base/_typography.scss */
+  h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  }
+}
+/* line 14, ../sass/base/_typography.scss */
+button {
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: #fff;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px #fff;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+@font-face {
+  /* line 14, ../sass/base/_typography.scss */
+  button {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg");
+  }
+}
+/* line 86, ../sass/helpers/_mixins.scss */
+button:hover {
+  text-decoration: none;
+  background: white;
+}
+/* line 90, ../sass/helpers/_mixins.scss */
+button:active {
+  outline: none 0px;
+}
+/* line 93, ../sass/helpers/_mixins.scss */
+button:focus {
+  outline: none 0px;
+}
+@font-face {
+  /* line 17, ../sass/base/_typography.scss */
+  button span {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg");
+  }
+}
+/***********************************
+***** PRE HEADER - TOP LINKS ******
+***********************************/
+/* line 5, ../sass/layout/_header.scss */
+.pre-header {
+  color: #777777;
+  background: #fbfbfb;
+  padding: 1em 0;
+  -webkit-box-shadow: 2px 1px 10px rgba(225, 225, 225, 0.71);
+  -moz-box-shadow: 2px 1px 10px rgba(225, 225, 225, 0.71);
+  box-shadow: 2px 1px 10px rgba(225, 225, 225, 0.71);
+}
+/* line 11, ../sass/layout/_header.scss */
+.pre-header .nav-link {
+  padding-right: 2em;
+}
+/* line 13, ../sass/layout/_header.scss */
+.pre-header .nav-link a {
+  text-decoration: none;
+}
+/* line 15, ../sass/layout/_header.scss */
+.pre-header .nav-link a:hover {
+  text-decoration: none;
+}
+
+/* line 2, ../sass/layout/_master-layout.scss */
+button {
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: #4576a2;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px #4576a2;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: set-button-text-color(#4576a2);
+}
+/* line 86, ../sass/helpers/_mixins.scss */
+button:hover {
+  text-decoration: none;
+  background: #3977ae;
+}
+/* line 90, ../sass/helpers/_mixins.scss */
+button:active {
+  outline: none 0px;
+}
+/* line 93, ../sass/helpers/_mixins.scss */
+button:focus {
+  outline: none 0px;
+}
+
+/* line 8, ../sass/layout/_master-layout.scss */
+.shape {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: red;
+  position: relative;
+  top: -50px;
+}
+/* line 181, ../sass/helpers/_mixins.scss */
+.shape:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top-color: red;
+}
+
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/components/_button.scss */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../sass/components/_button.scss */
+button {
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: #63a9e8;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px #63a9e8;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 86, ../sass/helpers/_mixins.scss */
+button:hover {
+  text-decoration: none;
+  background: #5aa9f1;
+}
+/* line 90, ../sass/helpers/_mixins.scss */
+button:active {
+  outline: none 0px;
+}
+/* line 93, ../sass/helpers/_mixins.scss */
+button:focus {
+  outline: none 0px;
+}
+/* line 11, ../sass/components/_button.scss */
+button span {
+  display: block;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  padding: 0.5em 1em;
+}
+/* line 17, ../sass/components/_button.scss */
+button span:hover {
+  cursor: pointer;
+}
+
+/* line 23, ../sass/components/_button.scss */
+.circle {
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.075);
+  border-radius: 50%;
+  transform: scale(0);
+}
+/* line 29, ../sass/components/_button.scss */
+.circle.animate {
+  animation: effect 0.65s linear;
+}
+
+@keyframes effect {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+/* Pages: Our Products*/
