@@ -2,19 +2,80 @@
 ***** PRE HEADER - TOP LINKS ******
 ***********************************/
 
-.pre-header {
-	color: $font-grey-light;
-	background: $font-grey-lighter;
-	@include spacer($padding-default);
-	@include box-shadow();
-
-	.nav-link{
-		padding-right: 2*$padding-default;
-		a{
-			text-decoration: none;
-			&:hover{
-				text-decoration: none;
-			}
-		}
-	}
+.header-xd {
+    .top-strip {
+        background: $clr-grey-lighter;
+        @include box-shadow();
+        ul {
+            margin: 0;
+            padding: 0;
+            float: left;
+            display: table;
+            li {
+                display: inline-block;
+                &:first-child {
+                    a {
+                        padding-left: 0px;
+                    }
+                }
+                a {
+                    color: $clr-grey-light;
+                    padding: 9px 20px;
+                    display: block;
+                    font-weight: 400;
+                    &:hover {
+                        color: $clr-black-dark;
+                    }
+                }
+            }
+        }
+        .search_top {
+            float: right;
+            padding: 6px;
+            font-size: 20px;
+            position: relative;
+            cursor: pointer;
+            .drop-down-xd {
+                position: absolute;
+                top: 0;
+                right: 100%;
+                padding: 5px 0;
+                background: $clr-grey-lighter;
+                border: 1px solid #eaeaea;
+                cursor: default;
+                width: 0;
+                @include ease-anim();
+                overflow: hidden;
+            }
+            &.open {
+                .drop-down-xd {
+                    width: 200px;
+                    padding: 5px;
+                }
+            }
+            &.open {
+                i.exd-close {
+                    opacity: 1;
+                    color: #c6c6c6;
+                }
+                i.exd-search {
+                    opacity: 0;
+                }
+            }
+            i {
+                @include ease-anim();
+                &.exd-close {
+                    position: absolute;
+                    left: 6px;
+                    top: 10px;
+                    margin: auto;
+                    opacity: 0;
+                }
+                &.exd-search {
+                    color: #c6c6c6;
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }

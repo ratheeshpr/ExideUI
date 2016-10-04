@@ -7,7 +7,7 @@
 }
 
 button {
-    @include button();
+    @include button($btn-light);
   span {
     display: block;
     user-select: none;

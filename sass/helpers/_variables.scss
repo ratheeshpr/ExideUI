@@ -1,31 +1,24 @@
 /*1. Background*/
 
-$bg-white: #ffffff;
-$bg-blue-light: #63a9e8;
-$bg-blue-lighter: #7db7ec;
-$bg-blue-dark: #688fb2;
-$bg-blue-darker: #4576a2;
+$clr-white: #ffffff;
 
-/*2. Font*/
+$clr-blue-light: #63a9e8;
+$clr-blue-lighter: #7db7ec;
+$clr-blue-dark: #688fb2;
+$clr-blue-darker: #4576a2;
 
-$font-white: #ffffff;
-$font-blue-light: #63a9e8;
-$font-blue-dark: #4576a2;
+$clr-black-lighter: #8d8d8d;
+$clr-black-light: #333333;
+$clr-black-dark: #000000;
 
-
-$font-black-lighter: #8d8d8d;
-$font-black-light: #333333;
-$font-black-dark: #000000;
-
-$font-grey-lighter: #fbfbfb;
-$font-grey-light: #777777;
-$font-grey-dark: #5b5b5b;
-$font-grey-darker: #3e3e3e;
+$clr-grey-lighter: #fbfbfb;
+$clr-grey-light: #777777;
+$clr-grey-dark: #5b5b5b;
+$clr-grey-darker: #3e3e3e;
 
 
 /*3. Button*/
 
-$btn-lighter: #ffffff;
 $btn-light: #afafaf;
 $btn-dark: #63a9e8;
 $btn-darker: #4576a2;

@@ -10,3 +10,13 @@ button{
 //	@include triangle(down, 50px, red);
 	 @include shape-diamond(100px, red);
 }
+a{
+    -webkit-transition: color .3s ease-out;
+    -moz-transition: color .3s ease-out;
+    -ms-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+    transition: color .3s ease-out;
+    &:hover{
+        text-decoration: none;
+    }
+}

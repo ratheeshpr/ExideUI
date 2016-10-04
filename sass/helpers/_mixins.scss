@@ -7,44 +7,49 @@
 // String Replace
 // =============================================================================
 @function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-	@return $string;
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
 }
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
-	$src: null;
-	$extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_"));
-	$formats: ( otf: "opentype", ttf: "truetype");
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
-	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
-		src: $src;
-	}
+    $src: null;
+    $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_"));
+    $formats: ( otf: "opentype", ttf: "truetype");
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
 }
+
 
 /*************************
 2. Mixin - Box Shadow
 *************************/
 
-@mixin box-shadow($top:2px, $left:1px, $blur:10px, $color: rgba(225, 225, 225, 0.71), $inset: false) {
-	@if $inset {
-		-webkit-box-shadow: inset $top $left $blur $color;
-		-moz-box-shadow: inset $top $left $blur $color;
-		box-shadow: inset $top $left $blur $color;
-	}
-	@else {
-		-webkit-box-shadow: $top $left $blur $color;
-		-moz-box-shadow: $top $left $blur $color;
-		box-shadow: $top $left $blur $color;
-	}
+@mixin box-shadow($top:2px,
+$left:0px,
+$blur:5px,
+$color: rgba(64, 64, 64, 0.25),
+$inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
 }
 
 /*************************
@@ -52,55 +57,55 @@
 *************************/
 
 @mixin text-field {
-	display: inline-block;
-	outline: none;
-	text-decoration: none;
-	font: 14px/100% Arial, Helvetica, sans-serif;
-	padding: .5em;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-	@include rounded();
-	@include box-shadow(0,
-	1px,
-	2px,
-	rgba(0, 0, 0, 0.2));
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    @include rounded();
+    @include box-shadow(0,
+    1px,
+    2px,
+    rgba(0, 0, 0, 0.2));
 }
 
 /*************************
 4. Mixin - Button
 *************************/
 
-@mixin button($color: $btn-dark) {
-	font-family: $brand-font-neo;
-	display: inline-block;
-	outline: none 0px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font-weight: $text-bold;
-	background: $color;
-	overflow: hidden;
-	padding: 0;
-	border: none $border-width $color;
-	color: $font-white;
-	@include rounded();
-	&:hover {
-		text-decoration: none;
-		background: saturate($color, 10%);
-	}
-	&:active {
-		outline: none 0px;
-	}
-	&:focus {
-		outline: none 0px;
-	}
+@mixin button($color) {
+    font-family: $brand-font-neo;
+    display: inline-block;
+    outline: none 0px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: $text-bold;
+    background: $color;
+    overflow: hidden;
+    padding: 0;
+    border: none $border-width $color;
+    color: $clr-white;
+    @include rounded();
+    &:hover {
+        text-decoration: none;
+        background: saturate($color, 10%);
+    }
+    &:active {
+        outline: none 0px;
+    }
+    &:focus {
+        outline: none 0px;
+    }
 }
 @function button-text-color($color) {
-	@if (lightness($color) > 40) {
-		@return $font-white;
-	}
-	@else {
-		@return $font-black-dark;
-	}
+    @if (lightness($color) > 40) {
+        @return $font-white;
+    }
+    @else {
+        @return $font-black-dark;
+    }
 }
 
 /*************************
@@ -108,86 +113,91 @@
 *************************/
 
 @mixin rounded($radius: $border-radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 }
 
 /*************************
 6. Mixin - Gradient
 *************************/
 
-@mixin gradient($from, $to) {
-	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-	background: -moz-linear-gradient(top, $from, $to);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}',
-	endColorstr='#{$to}');
+@mixin gradient($from,
+$to) {
+    background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background: -moz-linear-gradient(top, $from, $to);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}',
+    endColorstr='#{$to}');
 }
 
 /*************************
 7. Mixin - Shapes - Circle
 *************************/
 
-@mixin shape-circle($width, $color) {
-	width: $width;
-	height: $width;
-	background: $color;
-	-moz-border-radius: $width/2;
-	-webkit-border-radius: $width/2;
-	border-radius: $width/2;
+@mixin shape-circle($width,
+$color) {
+    width: $width;
+    height: $width;
+    background: $color;
+    -moz-border-radius: $width/2;
+    -webkit-border-radius: $width/2;
+    border-radius: $width/2;
 }
 
 /**************************************************
 8. Mixin - Shapes - Triangle - Up/Down/Left/Right
 **************************************************/
 
-@mixin triangle($dir, $size, $color) {
-	width: 0;
-	height: 0;
-	@if $dir=='up' {
-		border-right: $size solid transparent;
-		border-bottom: $size * 1.732 solid $color;
-		border-left: $size solid transparent;
-	}
-	@else if $dir=='down' {
-		border-top: $size * 1.732 solid $color;
-		border-right: $size solid transparent;
-		border-left: $size solid transparent;
-	}
-	@else if $dir=='left' {
-		border-top: $size solid transparent;
-		border-right: $size * 1.732 solid $color;
-		border-bottom: $size solid transparent;
-	}
-	@else if $dir=='right' {
-		border-top: $size solid transparent;
-		border-bottom: $size solid transparent;
-		border-left: $size * 1.732 solid $color;
-	}
+@mixin triangle($dir,
+$size,
+$color) {
+    width: 0;
+    height: 0;
+    @if $dir=='up' {
+        border-right: $size solid transparent;
+        border-bottom: $size * 1.732 solid $color;
+        border-left: $size solid transparent;
+    }
+    @else if $dir=='down' {
+        border-top: $size * 1.732 solid $color;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    }
+    @else if $dir=='left' {
+        border-top: $size solid transparent;
+        border-right: $size * 1.732 solid $color;
+        border-bottom: $size solid transparent;
+    }
+    @else if $dir=='right' {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size * 1.732 solid $color;
+    }
 }
 
 /***********************************
 9. Mixin - Shapes - Diamond
 ***********************************/
 
-@mixin shape-diamond($size, $color) {
-	$size: $size / 2;
-	width: 0;
-	height: 0;
-	border: $size solid transparent;
-	border-bottom-color: $color;
-	position: relative;
-	top: -$size;
-	&:after {
-		content: '';
-		position: absolute;
-		left: -$size;
-		top: $size;
-		width: 0;
-		height: 0;
-		border: $size solid transparent;
-		border-top-color: $color;
-	}
+@mixin shape-diamond($size,
+$color) {
+    $size: $size / 2;
+    width: 0;
+    height: 0;
+    border: $size solid transparent;
+    border-bottom-color: $color;
+    position: relative;
+    top: -$size;
+    &:after {
+        content: '';
+        position: absolute;
+        left: -$size;
+        top: $size;
+        width: 0;
+        height: 0;
+        border: $size solid transparent;
+        border-top-color: $color;
+    }
 }
 
 /***********************************
@@ -195,7 +205,7 @@
 ***********************************/
 
 @mixin spacer($padding) {
-	padding: $padding 0;
+    padding: $padding 0;
 }
 
 /***********************************
@@ -203,11 +213,25 @@
 header{ @include default-box(#666, block, 10px); }
 ***********************************/
 
-@mixin box($color: $bg-white, $boxModel: block, $padding: 3*$padding-default) {
-  background: $color;
-  border: 0px none;
-  clear: both;
-  display: $boxModel;
-  margin: 0;
-  padding: $padding 0;
+@mixin box($color: $bg-white,
+$boxModel: block,
+$padding: 3*$padding-default) {
+    background: $color;
+    border: 0px none;
+    clear: both;
+    display: $boxModel;
+    margin: 0;
+    padding: $padding 0;
+}
+
+/*************************
+12. Mixin - ease-out
+*************************/
+
+@mixin ease-anim($prop:all, $dur:.3s, $fun:ease-out){
+    -webkit-transition: $prop $dur $fun;
+    -moz-transition: $prop $dur $fun;
+    -ms-transition: $prop $dur $fun;
+    -o-transition: $prop $dur $fun;
+    transition: $prop $dur $fun;
 }
