@@ -1,0 +1,12 @@
+
+button{
+	@include button($btn-darker);
+	@include rounded($border-radius/2);
+	color: set-button-text-color(#4576a2);
+}
+
+.shape{
+//	@include shape-circle(100px, red);
+//	@include triangle(down, 50px, red);
+	 @include shape-diamond(100px, red);
+}

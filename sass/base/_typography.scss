@@ -1,0 +1,20 @@
+/*************************
+1. Font Embedding
+*************************/
+
+/*1. @include font-face(Samplinal, fonts/Samplinal, 500, normal, eot woff2 woff);*/
+
+
+h1{
+	color: red;
+	text-align: center;
+	@include font-face('Roboto','../fonts/Roboto-Bold' , 600, normal, eot woff2 woff);
+	@include rounded(3em);
+}
+button{
+	@include font-face('Titillium Web','../fonts/TitilliumWeb-Regular' , 600, normal, eot woff2 woff svg);
+	@include button(#fff);
+	span{
+		@include font-face('Titillium Web','../fonts/TitilliumWeb-Regular' , 600, normal, eot woff2 woff svg);
+	}
+}

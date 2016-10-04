@@ -1,0 +1,20 @@
+/***********************************
+***** PRE HEADER - TOP LINKS ******
+***********************************/
+
+.pre-header {
+	color: $font-grey-light;
+	background: $font-grey-lighter;
+	@include spacer($padding-default);
+	@include box-shadow();
+
+	.nav-link{
+		padding-right: 2*$padding-default;
+		a{
+			text-decoration: none;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+
+@import "base/reset.scss";
+@import "base/typography.scss";
+
+@import "layout/header.scss";
+@import "layout/master-layout.scss";
+@import "layout/footer.scss";
+
+@import "components/accordian.scss";
+@import "components/form.scss";
+@import "components/gallery.scss";
+@import "components/map.scss";
+@import "components/popup.scss";
+@import "components/tabs.scss";
+@import "components/button.scss";
+@import "components/icon.scss";
+
+@import "pages/template.scss";
