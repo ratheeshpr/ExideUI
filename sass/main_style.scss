@@ -8,6 +8,7 @@
 
 @import "base/reset.scss";
 @import "base/typography.scss";
+@import "base/icon.scss";
 
 @import "layout/header.scss";
 @import "layout/master-layout.scss";
@@ -20,6 +21,6 @@
 @import "components/popup.scss";
 @import "components/tabs.scss";
 @import "components/button.scss";
-@import "components/icon.scss";
+
 
 @import "pages/template.scss";

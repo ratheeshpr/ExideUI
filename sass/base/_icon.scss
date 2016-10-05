@@ -1,0 +1,653 @@
+/***********************************
+1. Icon variables
+2. Icon Styles
+************************************/
+
+/***********************************
+		1. Icon variables
+************************************/
+
+$icomoon-font-path: "../fonts" !default;
+
+$exd-apple: "\e900";
+$exd-award: "\e901";
+$exd-bag: "\e902";
+$exd-box: "\e903";
+$exd-box_02: "\e904";
+$exd-calculator: "\e905";
+$exd-calender: "\e906";
+$exd-calender_01: "\e907";
+$exd-call: "\e908";
+$exd-chat: "\e909";
+$exd-close: "\e90a";
+$exd-close_box: "\e90b";
+$exd-close_round-path1: "\e90c";
+$exd-close_round-path2: "\e90d";
+$exd-doctor: "\e90e";
+$exd-down: "\e90f";
+$exd-down_box: "\e910";
+$exd-facebook: "\e911";
+$exd-google_pluse: "\e912";
+$exd-graph: "\e913";
+$exd-hand: "\e914";
+$exd-hand_01: "\e915";
+$exd-hand_02: "\e916";
+$exd-hand_03: "\e917";
+$exd-hand_04: "\e918";
+$exd-in: "\e919";
+$exd-info_01: "\e91a";
+$exd-info_02: "\e91b";
+$exd-leaf: "\e91c";
+$exd-left: "\e91d";
+$exd-light: "\e91e";
+$exd-love: "\e91f";
+$exd-love_hand: "\e920";
+$exd-mail: "\e921";
+$exd-man_01: "\e922";
+$exd-man_02-path1: "\e923";
+$exd-man_02-path2: "\e924";
+$exd-man_02-path3: "\e925";
+$exd-man_03: "\e926";
+$exd-map: "\e927";
+$exd-medical: "\e928";
+$exd-money_01: "\e929";
+$exd-money_02: "\e92a";
+$exd-money_03-path1: "\e92b";
+$exd-money_03-path2: "\e92c";
+$exd-money_03-path3: "\e92d";
+$exd-money_03-path4: "\e92e";
+$exd-mouse: "\e92f";
+$exd-news: "\e930";
+$exd-note: "\e931";
+$exd-note_01: "\e932";
+$exd-note_02: "\e933";
+$exd-note_03: "\e934";
+$exd-note_04: "\e935";
+$exd-note_05: "\e936";
+$exd-note_search: "\e937";
+$exd-pdf: "\e938";
+$exd-people-path1: "\e939";
+$exd-people-path2: "\e93a";
+$exd-people-path3: "\e93b";
+$exd-people-path4: "\e93c";
+$exd-people-path5: "\e93d";
+$exd-people-path6: "\e93e";
+$exd-people-path7: "\e93f";
+$exd-people-path8: "\e940";
+$exd-people-path9: "\e941";
+$exd-people-path10: "\e942";
+$exd-peoples_01: "\e943";
+$exd-peoples_02: "\e944";
+$exd-percent_box: "\e945";
+$exd-phone: "\e946";
+$exd-play: "\e947";
+$exd-play_round: "\e948";
+$exd-right: "\e949";
+$exd-right_arrow: "\e94a";
+$exd-right_round: "\e94b";
+$exd-round_box-path1: "\e94c";
+$exd-round_box-path2: "\e94d";
+$exd-round_box-path3: "\e94e";
+$exd-round_box-path4: "\e94f";
+$exd-savings: "\e950";
+$exd-search: "\e951";
+$exd-settings: "\e952";
+$exd-son: "\e953";
+$exd-star: "\e954";
+$exd-star_fill: "\e955";
+$exd-tax: "\e956";
+$exd-tick_01: "\e957";
+$exd-tick_02: "\e958";
+$exd-tour: "\e959";
+$exd-twitter: "\e95a";
+$exd-umbrella_02: "\e95b";
+$exd-umbrlla_01: "\e95c";
+$exd-video: "\e95d";
+$exd-you_tube: "\e95e";
+
+/***********************************
+		2. Icon Styles
+************************************/
+@font-face {
+  font-family: 'exide_icons';
+  src:  url('#{$icomoon-font-path}/exide_icons.eot?mnd21y');
+  src:  url('#{$icomoon-font-path}/exide_icons.eot?mnd21y#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/exide_icons.ttf?mnd21y') format('truetype'),
+    url('#{$icomoon-font-path}/exide_icons.woff?mnd21y') format('woff'),
+    url('#{$icomoon-font-path}/exide_icons.svg?mnd21y#exide_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'exide_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.exd-apple {
+  &:before {
+    content: $exd-apple;
+  }
+}
+.exd-award {
+  &:before {
+    content: $exd-award;
+  }
+}
+.exd-bag {
+  &:before {
+    content: $exd-bag;
+  }
+}
+.exd-box {
+  &:before {
+    content: $exd-box;
+  }
+}
+.exd-box_02 {
+  &:before {
+    content: $exd-box_02;
+  }
+}
+.exd-calculator {
+  &:before {
+    content: $exd-calculator;
+  }
+}
+.exd-calender {
+  &:before {
+    content: $exd-calender;
+  }
+}
+.exd-calender_01 {
+  &:before {
+    content: $exd-calender_01;
+  }
+}
+.exd-call {
+  &:before {
+    content: $exd-call;
+  }
+}
+.exd-chat {
+  &:before {
+    content: $exd-chat;
+  }
+}
+.exd-close {
+  &:before {
+    content: $exd-close;
+  }
+}
+.exd-close_box {
+  &:before {
+    content: $exd-close_box;
+  }
+}
+.exd-close_round .path1 {
+  &:before {
+    content: $exd-close_round-path1;
+    color: rgb(93, 94, 94);
+  }
+}
+.exd-close_round .path2 {
+  &:before {
+    content: $exd-close_round-path2;
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+.exd-doctor {
+  &:before {
+    content: $exd-doctor;
+  }
+}
+.exd-down {
+  &:before {
+    content: $exd-down;
+  }
+}
+.exd-down_box {
+  &:before {
+    content: $exd-down_box;
+  }
+}
+.exd-facebook {
+  &:before {
+    content: $exd-facebook;
+  }
+}
+.exd-google_pluse {
+  &:before {
+    content: $exd-google_pluse;
+  }
+}
+.exd-graph {
+  &:before {
+    content: $exd-graph;
+  }
+}
+.exd-hand {
+  &:before {
+    content: $exd-hand;
+  }
+}
+.exd-hand_01 {
+  &:before {
+    content: $exd-hand_01;
+  }
+}
+.exd-hand_02 {
+  &:before {
+    content: $exd-hand_02;
+  }
+}
+.exd-hand_03 {
+  &:before {
+    content: $exd-hand_03;
+  }
+}
+.exd-hand_04 {
+  &:before {
+    content: $exd-hand_04;
+  }
+}
+.exd-in {
+  &:before {
+    content: $exd-in;
+  }
+}
+.exd-info_01 {
+  &:before {
+    content: $exd-info_01;
+  }
+}
+.exd-info_02 {
+  &:before {
+    content: $exd-info_02;
+  }
+}
+.exd-leaf {
+  &:before {
+    content: $exd-leaf;
+  }
+}
+.exd-left {
+  &:before {
+    content: $exd-left;
+  }
+}
+.exd-light {
+  &:before {
+    content: $exd-light;
+  }
+}
+.exd-love {
+  &:before {
+    content: $exd-love;
+  }
+}
+.exd-love_hand {
+  &:before {
+    content: $exd-love_hand;
+  }
+}
+.exd-mail {
+  &:before {
+    content: $exd-mail;
+  }
+}
+.exd-man_01 {
+  &:before {
+    content: $exd-man_01;
+  }
+}
+.exd-man_02 .path1 {
+  &:before {
+    content: $exd-man_02-path1;
+    color: rgb(29, 61, 114);
+  }
+}
+.exd-man_02 .path2 {
+  &:before {
+    content: $exd-man_02-path2;
+    margin-left: -1em;
+    color: rgb(236, 36, 39);
+  }
+}
+.exd-man_02 .path3 {
+  &:before {
+    content: $exd-man_02-path3;
+    margin-left: -1em;
+    color: rgb(29, 61, 114);
+  }
+}
+.exd-man_03 {
+  &:before {
+    content: $exd-man_03;
+  }
+}
+.exd-map {
+  &:before {
+    content: $exd-map;
+  }
+}
+.exd-medical {
+  &:before {
+    content: $exd-medical;
+  }
+}
+.exd-money_01 {
+  &:before {
+    content: $exd-money_01;
+  }
+}
+.exd-money_02 {
+  &:before {
+    content: $exd-money_02;
+  }
+}
+.exd-money_03 .path1 {
+  &:before {
+    content: $exd-money_03-path1;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-money_03 .path2 {
+  &:before {
+    content: $exd-money_03-path2;
+    margin-left: -1em;
+    color: rgb(237, 28, 36);
+  }
+}
+.exd-money_03 .path3 {
+  &:before {
+    content: $exd-money_03-path3;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-money_03 .path4 {
+  &:before {
+    content: $exd-money_03-path4;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-mouse {
+  &:before {
+    content: $exd-mouse;
+  }
+}
+.exd-news {
+  &:before {
+    content: $exd-news;
+  }
+}
+.exd-note {
+  &:before {
+    content: $exd-note;
+  }
+}
+.exd-note_01 {
+  &:before {
+    content: $exd-note_01;
+  }
+}
+.exd-note_02 {
+  &:before {
+    content: $exd-note_02;
+  }
+}
+.exd-note_03 {
+  &:before {
+    content: $exd-note_03;
+  }
+}
+.exd-note_04 {
+  &:before {
+    content: $exd-note_04;
+  }
+}
+.exd-note_05 {
+  &:before {
+    content: $exd-note_05;
+  }
+}
+.exd-note_search {
+  &:before {
+    content: $exd-note_search;
+  }
+}
+.exd-pdf {
+  &:before {
+    content: $exd-pdf;
+  }
+}
+.exd-people .path1 {
+  &:before {
+    content: $exd-people-path1;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path2 {
+  &:before {
+    content: $exd-people-path2;
+    margin-left: -1em;
+    color: rgb(237, 28, 36);
+  }
+}
+.exd-people .path3 {
+  &:before {
+    content: $exd-people-path3;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path4 {
+  &:before {
+    content: $exd-people-path4;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path5 {
+  &:before {
+    content: $exd-people-path5;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path6 {
+  &:before {
+    content: $exd-people-path6;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path7 {
+  &:before {
+    content: $exd-people-path7;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path8 {
+  &:before {
+    content: $exd-people-path8;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path9 {
+  &:before {
+    content: $exd-people-path9;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-people .path10 {
+  &:before {
+    content: $exd-people-path10;
+    margin-left: -1em;
+    color: rgb(0, 57, 117);
+  }
+}
+.exd-peoples_01 {
+  &:before {
+    content: $exd-peoples_01;
+  }
+}
+.exd-peoples_02 {
+  &:before {
+    content: $exd-peoples_02;
+  }
+}
+.exd-percent_box {
+  &:before {
+    content: $exd-percent_box;
+  }
+}
+.exd-phone {
+  &:before {
+    content: $exd-phone;
+  }
+}
+.exd-play {
+  &:before {
+    content: $exd-play;
+  }
+}
+.exd-play_round {
+  &:before {
+    content: $exd-play_round;
+  }
+}
+.exd-right {
+  &:before {
+    content: $exd-right;
+  }
+}
+.exd-right_arrow {
+  &:before {
+    content: $exd-right_arrow;
+  }
+}
+.exd-right_round {
+  &:before {
+    content: $exd-right_round;
+  }
+}
+.exd-round_box .path1 {
+  &:before {
+    content: $exd-round_box-path1;
+    color: rgb(29, 61, 114);
+  }
+}
+.exd-round_box .path2 {
+  &:before {
+    content: $exd-round_box-path2;
+    margin-left: -1em;
+    color: rgb(29, 61, 114);
+  }
+}
+.exd-round_box .path3 {
+  &:before {
+    content: $exd-round_box-path3;
+    margin-left: -1em;
+    color: rgb(29, 61, 114);
+  }
+}
+.exd-round_box .path4 {
+  &:before {
+    content: $exd-round_box-path4;
+    margin-left: -1em;
+    color: rgb(236, 36, 39);
+  }
+}
+.exd-savings {
+  &:before {
+    content: $exd-savings;
+  }
+}
+.exd-search {
+  &:before {
+    content: $exd-search;
+  }
+}
+.exd-settings {
+  &:before {
+    content: $exd-settings;
+  }
+}
+.exd-son {
+  &:before {
+    content: $exd-son;
+  }
+}
+.exd-star {
+  &:before {
+    content: $exd-star;
+  }
+}
+.exd-star_fill {
+  &:before {
+    content: $exd-star_fill;
+  }
+}
+.exd-tax {
+  &:before {
+    content: $exd-tax;
+  }
+}
+.exd-tick_01 {
+  &:before {
+    content: $exd-tick_01;
+  }
+}
+.exd-tick_02 {
+  &:before {
+    content: $exd-tick_02;
+  }
+}
+.exd-tour {
+  &:before {
+    content: $exd-tour;
+  }
+}
+.exd-twitter {
+  &:before {
+    content: $exd-twitter;
+  }
+}
+.exd-umbrella_02 {
+  &:before {
+    content: $exd-umbrella_02;
+  }
+}
+.exd-umbrlla_01 {
+  &:before {
+    content: $exd-umbrlla_01;
+  }
+}
+.exd-video {
+  &:before {
+    content: $exd-video;
+  }
+}
+.exd-you_tube {
+  &:before {
+    content: $exd-you_tube;
+  }
+}
+

@@ -1,0 +1,800 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*1. Background*/
+/*3. Button*/
+/*4. Accordian & Tabs*/
+/*5. Tables*/
+/*6. Typogrphy*/
+/*7. Border*/
+/*8. Spacer*/
+/*************************
+1. Mixin - Font Family
+*************************/
+/*************************
+2. Mixin - Box Shadow
+*************************/
+/*************************
+3. Mixin - Text field
+*************************/
+/*************************
+4. Mixin - Button
+*************************/
+/*************************
+5. Mixin - Border Radius
+*************************/
+/*************************
+6. Mixin - Gradient
+*************************/
+/*************************
+7. Mixin - Shapes - Circle
+*************************/
+/**************************************************
+8. Mixin - Shapes - Triangle - Up/Down/Left/Right
+**************************************************/
+/***********************************
+9. Mixin - Shapes - Diamond
+***********************************/
+/***********************************
+10. Mixin - Padding - TOP & Bottom
+***********************************/
+/***********************************
+11. Mixin - Default Box
+header{ @include default-box(#666, block, 10px); }
+***********************************/
+/*************************
+12. Mixin - ease-out
+*************************/
+/* line 1, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_reset.scss */
+dl, ol, ul {
+  margin-bottom: 0; }
+
+/*************************
+1. Font Embedding
+*************************/
+/*1. @include font-face(Samplinal, fonts/Samplinal, 500, normal, eot woff2 woff);*/
+/* line 8, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_typography.scss */
+h1 {
+  color: red;
+  text-align: center;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em; }
+
+@font-face {
+  /* line 8, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_typography.scss */
+  h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"); } }
+
+/* line 14, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_typography.scss */
+button {
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: #fff;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px #fff;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+@font-face {
+  /* line 14, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_typography.scss */
+  button {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg"); } }
+  /* line 91, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:hover {
+    text-decoration: none;
+    background: white; }
+  /* line 95, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:active {
+    outline: none 0px; }
+  /* line 98, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:focus {
+    outline: none 0px; }
+
+@font-face {
+  /* line 17, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_typography.scss */
+  button span {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg"); } }
+
+/***********************************
+1. Icon variables
+2. Icon Styles
+************************************/
+/***********************************
+		1. Icon variables
+************************************/
+/***********************************
+		2. Icon Styles
+************************************/
+@font-face {
+  font-family: 'exide_icons';
+  src: url("../fonts/exide_icons.eot?mnd21y");
+  src: url("../fonts/exide_icons.eot?mnd21y#iefix") format("embedded-opentype"), url("../fonts/exide_icons.ttf?mnd21y") format("truetype"), url("../fonts/exide_icons.woff?mnd21y") format("woff"), url("../fonts/exide_icons.svg?mnd21y#exide_icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 122, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'exide_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 138, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-apple:before {
+  content: ""; }
+
+/* line 143, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-award:before {
+  content: ""; }
+
+/* line 148, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-bag:before {
+  content: ""; }
+
+/* line 153, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-box:before {
+  content: ""; }
+
+/* line 158, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-box_02:before {
+  content: ""; }
+
+/* line 163, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-calculator:before {
+  content: ""; }
+
+/* line 168, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-calender:before {
+  content: ""; }
+
+/* line 173, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-calender_01:before {
+  content: ""; }
+
+/* line 178, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-call:before {
+  content: ""; }
+
+/* line 183, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-chat:before {
+  content: ""; }
+
+/* line 188, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-close:before {
+  content: ""; }
+
+/* line 193, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-close_box:before {
+  content: ""; }
+
+/* line 198, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-close_round .path1:before {
+  content: "";
+  color: #5d5e5e; }
+
+/* line 204, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-close_round .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: white; }
+
+/* line 211, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-doctor:before {
+  content: ""; }
+
+/* line 216, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-down:before {
+  content: ""; }
+
+/* line 221, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-down_box:before {
+  content: ""; }
+
+/* line 226, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-facebook:before {
+  content: ""; }
+
+/* line 231, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-google_pluse:before {
+  content: ""; }
+
+/* line 236, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-graph:before {
+  content: ""; }
+
+/* line 241, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-hand:before {
+  content: ""; }
+
+/* line 246, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-hand_01:before {
+  content: ""; }
+
+/* line 251, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-hand_02:before {
+  content: ""; }
+
+/* line 256, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-hand_03:before {
+  content: ""; }
+
+/* line 261, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-hand_04:before {
+  content: ""; }
+
+/* line 266, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-in:before {
+  content: ""; }
+
+/* line 271, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-info_01:before {
+  content: ""; }
+
+/* line 276, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-info_02:before {
+  content: ""; }
+
+/* line 281, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-leaf:before {
+  content: ""; }
+
+/* line 286, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-left:before {
+  content: ""; }
+
+/* line 291, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-light:before {
+  content: ""; }
+
+/* line 296, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-love:before {
+  content: ""; }
+
+/* line 301, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-love_hand:before {
+  content: ""; }
+
+/* line 306, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-mail:before {
+  content: ""; }
+
+/* line 311, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-man_01:before {
+  content: ""; }
+
+/* line 316, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-man_02 .path1:before {
+  content: "";
+  color: #1d3d72; }
+
+/* line 322, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-man_02 .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ec2427; }
+
+/* line 329, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-man_02 .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #1d3d72; }
+
+/* line 336, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-man_03:before {
+  content: ""; }
+
+/* line 341, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-map:before {
+  content: ""; }
+
+/* line 346, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-medical:before {
+  content: ""; }
+
+/* line 351, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-money_01:before {
+  content: ""; }
+
+/* line 356, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-money_02:before {
+  content: ""; }
+
+/* line 361, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-money_03 .path1:before {
+  content: "";
+  color: #003975; }
+
+/* line 367, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-money_03 .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ed1c24; }
+
+/* line 374, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-money_03 .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 381, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-money_03 .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 388, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-mouse:before {
+  content: ""; }
+
+/* line 393, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-news:before {
+  content: ""; }
+
+/* line 398, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note:before {
+  content: ""; }
+
+/* line 403, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note_01:before {
+  content: ""; }
+
+/* line 408, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note_02:before {
+  content: ""; }
+
+/* line 413, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note_03:before {
+  content: ""; }
+
+/* line 418, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note_04:before {
+  content: ""; }
+
+/* line 423, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note_05:before {
+  content: ""; }
+
+/* line 428, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-note_search:before {
+  content: ""; }
+
+/* line 433, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-pdf:before {
+  content: ""; }
+
+/* line 438, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path1:before {
+  content: "";
+  color: #003975; }
+
+/* line 444, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ed1c24; }
+
+/* line 451, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 458, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 465, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path5:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 472, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path6:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 479, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path7:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 486, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path8:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 493, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path9:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 500, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-people .path10:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975; }
+
+/* line 507, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-peoples_01:before {
+  content: ""; }
+
+/* line 512, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-peoples_02:before {
+  content: ""; }
+
+/* line 517, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-percent_box:before {
+  content: ""; }
+
+/* line 522, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-phone:before {
+  content: ""; }
+
+/* line 527, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-play:before {
+  content: ""; }
+
+/* line 532, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-play_round:before {
+  content: ""; }
+
+/* line 537, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-right:before {
+  content: ""; }
+
+/* line 542, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-right_arrow:before {
+  content: ""; }
+
+/* line 547, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-right_round:before {
+  content: ""; }
+
+/* line 552, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-round_box .path1:before {
+  content: "";
+  color: #1d3d72; }
+
+/* line 558, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-round_box .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #1d3d72; }
+
+/* line 565, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-round_box .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #1d3d72; }
+
+/* line 572, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-round_box .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #ec2427; }
+
+/* line 579, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-savings:before {
+  content: ""; }
+
+/* line 584, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-search:before {
+  content: ""; }
+
+/* line 589, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-settings:before {
+  content: ""; }
+
+/* line 594, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-son:before {
+  content: ""; }
+
+/* line 599, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-star:before {
+  content: ""; }
+
+/* line 604, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-star_fill:before {
+  content: ""; }
+
+/* line 609, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-tax:before {
+  content: ""; }
+
+/* line 614, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-tick_01:before {
+  content: ""; }
+
+/* line 619, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-tick_02:before {
+  content: ""; }
+
+/* line 624, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-tour:before {
+  content: ""; }
+
+/* line 629, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-twitter:before {
+  content: ""; }
+
+/* line 634, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-umbrella_02:before {
+  content: ""; }
+
+/* line 639, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-umbrlla_01:before {
+  content: ""; }
+
+/* line 644, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-video:before {
+  content: ""; }
+
+/* line 649, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/base/_icon.scss */
+.exd-you_tube:before {
+  content: ""; }
+
+/***********************************
+***** PRE HEADER - TOP LINKS ******
+***********************************/
+/* line 6, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+.header-xd .top-strip {
+  background: #fbfbfb;
+  -webkit-box-shadow: 2px 0px 5px rgba(64, 64, 64, 0.25);
+  -moz-box-shadow: 2px 0px 5px rgba(64, 64, 64, 0.25);
+  box-shadow: 2px 0px 5px rgba(64, 64, 64, 0.25); }
+  /* line 9, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+  .header-xd .top-strip ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: table; }
+    /* line 14, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+    .header-xd .top-strip ul li {
+      display: inline-block; }
+      /* line 17, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+      .header-xd .top-strip ul li:first-child a {
+        padding-left: 0px; }
+      /* line 21, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+      .header-xd .top-strip ul li a {
+        color: #777777;
+        padding: 9px 20px;
+        display: block;
+        font-weight: 400; }
+        /* line 26, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+        .header-xd .top-strip ul li a:hover {
+          color: #000000; }
+  /* line 32, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+  .header-xd .top-strip .search_top {
+    float: right;
+    padding: 6px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer; }
+    /* line 38, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+    .header-xd .top-strip .search_top .drop-down-xd {
+      position: absolute;
+      top: 0;
+      right: 100%;
+      padding: 5px 0;
+      background: #fbfbfb;
+      border: 1px solid #eaeaea;
+      cursor: default;
+      width: 0;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      overflow: hidden; }
+    /* line 51, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+    .header-xd .top-strip .search_top.open .drop-down-xd {
+      width: 200px;
+      padding: 5px; }
+    /* line 57, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+    .header-xd .top-strip .search_top.open i.exd-close {
+      opacity: 1;
+      color: #c6c6c6; }
+    /* line 61, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+    .header-xd .top-strip .search_top.open i.exd-search {
+      opacity: 0; }
+    /* line 65, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+    .header-xd .top-strip .search_top i {
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+      /* line 67, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+      .header-xd .top-strip .search_top i.exd-close {
+        position: absolute;
+        left: 6px;
+        top: 10px;
+        margin: auto;
+        opacity: 0; }
+      /* line 74, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_header.scss */
+      .header-xd .top-strip .search_top i.exd-search {
+        color: #c6c6c6;
+        opacity: 1; }
+
+/* line 2, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_master-layout.scss */
+button {
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: #4576a2;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px #4576a2;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: set-button-text-color(#4576a2); }
+  /* line 91, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:hover {
+    text-decoration: none;
+    background: #3977ae; }
+  /* line 95, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:active {
+    outline: none 0px; }
+  /* line 98, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:focus {
+    outline: none 0px; }
+
+/* line 8, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_master-layout.scss */
+.shape {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: red;
+  position: relative;
+  top: -50px; }
+  /* line 191, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  .shape:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red; }
+
+/* line 13, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_master-layout.scss */
+a {
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out; }
+  /* line 19, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/layout/_master-layout.scss */
+  a:hover {
+    text-decoration: none; }
+
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 3, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/components/_button.scss */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/* line 9, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/components/_button.scss */
+button {
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: #afafaf;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px #afafaf;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+  /* line 91, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:hover {
+    text-decoration: none;
+    background: #b7a7a7; }
+  /* line 95, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:active {
+    outline: none 0px; }
+  /* line 98, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/helpers/_mixins.scss */
+  button:focus {
+    outline: none 0px; }
+  /* line 11, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/components/_button.scss */
+  button span {
+    display: block;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5em 1em; }
+    /* line 17, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/components/_button.scss */
+    button span:hover {
+      cursor: pointer; }
+
+/* line 23, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/components/_button.scss */
+.circle {
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.075);
+  border-radius: 50%;
+  transform: scale(0); }
+  /* line 29, D:/KP/2016/6. EXIDE/Exide_UI_Git/sass/components/_button.scss */
+  .circle.animate {
+    animation: effect 0.65s linear; }
+
+@keyframes effect {
+  100% {
+    opacity: 0;
+    transform: scale(2.5); } }
+
+/* Pages: Our Products*/
+
+/*# sourceMappingURL=main_style.css.map */
