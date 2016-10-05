@@ -1,1 +1,23 @@
-/* Pages: Our Products*/
+/*Home page components*/
+
+.box{
+	@include box();
+	@include box-sizing();
+	@include box-shadow(0px);
+	@include rounded();
+}
+
+.box-default{
+	background: $clr-white;
+}
+
+.box-blue{
+	@extend .box;
+	background: $clr-blue-darker;
+	*{
+		color: $clr-white;
+	}
+	button{
+		border: solid 1px $clr-white;
+	}
+}

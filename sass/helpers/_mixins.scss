@@ -4,8 +4,7 @@
 
 //Usage: @include font-face('Roboto Bold','Roboto-Bold', normal (optional), bold (optional));
 // =============================================================================
-// String Replace
-// =============================================================================
+// String Replace =============================================================================
 @function str-replace($string, $search, $replace: "") {
     $index: str-index($string, $search);
     @if $index {
@@ -29,7 +28,6 @@
         src: $src;
     }
 }
-
 
 /*************************
 2. Mixin - Box Shadow
@@ -213,15 +211,12 @@ $color) {
 header{ @include default-box(#666, block, 10px); }
 ***********************************/
 
-@mixin box($color: $bg-white,
-$boxModel: block,
-$padding: 3*$padding-default) {
-    background: $color;
+@mixin box($box-model: block, $padding: 3*$padding-default) {
     border: 0px none;
     clear: both;
-    display: $boxModel;
+    display: $box-model;
     margin: 0;
-    padding: $padding 0;
+    padding: $padding-default;
 }
 
 /*************************
@@ -234,4 +229,27 @@ $padding: 3*$padding-default) {
     -ms-transition: $prop $dur $fun;
     -o-transition: $prop $dur $fun;
     transition: $prop $dur $fun;
+}
+
+/*************************
+13. Mixin - Box Sizing
+*************************/
+
+@mixin box-sizing($box-model: border-box) {
+  -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model;
+          box-sizing: $box-model;
+}
+
+/*************************
+14. Mixin - Transition
+*************************/
+
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
 }
