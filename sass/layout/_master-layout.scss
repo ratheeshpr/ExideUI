@@ -1,4 +1,10 @@
-
+body{
+    font-family: $brand-font-rob;
+    font-size: 14px;
+}
+.btn-effect{
+    overflow: hidden;
+}
 button{
 	@include button($btn-darker);
 	@include rounded($border-radius/2);
@@ -16,7 +22,21 @@ a{
     -ms-transition: color .3s ease-out;
     -o-transition: color .3s ease-out;
     transition: color .3s ease-out;
-    &:hover{
+    &:hover,&:focus{
         text-decoration: none;
     }
+}
+.mob-only{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    /*for mob hide*/
+    .mob-only{
+        display: block;
+    }
+
 }

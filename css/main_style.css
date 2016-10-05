@@ -3,7 +3,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*1. Background*/
-/*2. Font*/
 /*3. Button*/
 /*4. Accordian & Tabs*/
 /*5. Tables*/
@@ -44,6 +43,9 @@
 11. Mixin - Default Box
 header{ @include default-box(#666, block, 10px); }
 ***********************************/
+/*************************
+12. Mixin - ease-out
+*************************/
 /* line 1, ../sass/base/_reset.scss */
 dl, ol, ul {
   margin-bottom: 0;
@@ -97,16 +99,16 @@ button {
     src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg");
   }
 }
-/* line 86, ../sass/helpers/_mixins.scss */
+/* line 91, ../sass/helpers/_mixins.scss */
 button:hover {
   text-decoration: none;
   background: white;
 }
-/* line 90, ../sass/helpers/_mixins.scss */
+/* line 95, ../sass/helpers/_mixins.scss */
 button:active {
   outline: none 0px;
 }
-/* line 93, ../sass/helpers/_mixins.scss */
+/* line 98, ../sass/helpers/_mixins.scss */
 button:focus {
   outline: none 0px;
 }
@@ -122,29 +124,392 @@ button:focus {
 /***********************************
 ***** PRE HEADER - TOP LINKS ******
 ***********************************/
-/* line 5, ../sass/layout/_header.scss */
-.pre-header {
-  color: #777777;
+/* line 6, ../sass/layout/_header.scss */
+.header-xd .top-strip {
   background: #fbfbfb;
-  padding: 1em 0;
-  -webkit-box-shadow: 2px 1px 10px rgba(225, 225, 225, 0.71);
-  -moz-box-shadow: 2px 1px 10px rgba(225, 225, 225, 0.71);
-  box-shadow: 2px 1px 10px rgba(225, 225, 225, 0.71);
+  z-index: 2;
+  position: relative;
+  -webkit-box-shadow: 2px 0px 5px rgba(64, 64, 64, 0.25);
+  -moz-box-shadow: 2px 0px 5px rgba(64, 64, 64, 0.25);
+  box-shadow: 2px 0px 5px rgba(64, 64, 64, 0.25);
 }
 /* line 11, ../sass/layout/_header.scss */
-.pre-header .nav-link {
-  padding-right: 2em;
+.header-xd .top-strip ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  display: table;
+  margin-left: -20px;
 }
-/* line 13, ../sass/layout/_header.scss */
-.pre-header .nav-link a {
-  text-decoration: none;
+/* line 17, ../sass/layout/_header.scss */
+.header-xd .top-strip ul li {
+  display: block;
+  float: left;
 }
-/* line 15, ../sass/layout/_header.scss */
-.pre-header .nav-link a:hover {
-  text-decoration: none;
+/* line 20, ../sass/layout/_header.scss */
+.header-xd .top-strip ul li a {
+  color: #777777;
+  padding: 9px 16px;
+  display: block;
+  font-weight: 400;
+}
+/* line 25, ../sass/layout/_header.scss */
+.header-xd .top-strip ul li a:hover {
+  color: #000000;
+}
+/* line 32, ../sass/layout/_header.scss */
+.header-xd .search_top {
+  float: right;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+/* line 38, ../sass/layout/_header.scss */
+.header-xd .search_top .toggle-xd {
+  padding: 6px;
+}
+/* line 41, ../sass/layout/_header.scss */
+.header-xd .search_top .toggle-xd:hover i.exd-close,
+.header-xd .search_top .toggle-xd:hover i.exd-search {
+  color: #63a9e8;
+}
+/* line 47, ../sass/layout/_header.scss */
+.header-xd .search_top .drop-down-xd {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: 0;
+  background: #ffffff;
+  cursor: default;
+  width: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 59, ../sass/layout/_header.scss */
+.header-xd .search_top .drop-down-xd form {
+  font-size: 14px;
+  width: 200px;
+  position: relative;
+  display: table;
+}
+/* line 64, ../sass/layout/_header.scss */
+.header-xd .search_top .drop-down-xd form input[type="text"] {
+  padding: 10px;
+  border: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 158px;
+  outline: none;
+  padding-right: 0;
+}
+/* line 74, ../sass/layout/_header.scss */
+.header-xd .search_top .drop-down-xd form button {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background: none;
+  float: right;
+}
+/* line 82, ../sass/layout/_header.scss */
+.header-xd .search_top .drop-down-xd form button:hover i.exd-search {
+  color: #63a9e8;
+}
+/* line 86, ../sass/layout/_header.scss */
+.header-xd .search_top .drop-down-xd form button i.exd-search {
+  opacity: 1;
+  font-size: 20px;
+  vertical-align: sub;
+}
+/* line 95, ../sass/layout/_header.scss */
+.header-xd .search_top.open .drop-down-xd {
+  width: 200px;
+}
+/* line 100, ../sass/layout/_header.scss */
+.header-xd .search_top.open i.exd-close {
+  opacity: 1;
+  color: #c6c6c6;
+}
+/* line 104, ../sass/layout/_header.scss */
+.header-xd .search_top.open i.exd-search {
+  opacity: 0;
+}
+/* line 108, ../sass/layout/_header.scss */
+.header-xd .search_top i {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* line 110, ../sass/layout/_header.scss */
+.header-xd .search_top i.exd-close {
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  margin: auto;
+  opacity: 0;
+}
+/* line 117, ../sass/layout/_header.scss */
+.header-xd .search_top i.exd-search {
+  color: #c6c6c6;
+  opacity: 1;
+}
+/* line 123, ../sass/layout/_header.scss */
+.header-xd .head-xd {
+  padding: 15px 0;
+  background: #ffffff;
+}
+/* line 126, ../sass/layout/_header.scss */
+.header-xd .head-xd .logo-xd {
+  width: 20%;
+  float: left;
+}
+/* line 129, ../sass/layout/_header.scss */
+.header-xd .head-xd .logo-xd img {
+  float: left;
+}
+/* line 133, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd {
+  float: left;
+  width: 80%;
+  font-family: "Titillium Web", sans-serif;
+}
+/* line 137, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 100%;
+  padding-left: 15px;
+}
+/* line 144, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul li {
+  display: block;
+  float: left;
+  vertical-align: middle;
+  width: 16.6666666%;
+}
+/* line 150, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul li:first-child a {
+  padding: 18px 19px;
+  background: #ed1c24;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+}
+/* line 156, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul li:first-child a:after {
+  display: none;
+}
+/* line 161, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul li a {
+  color: #4576a2;
+  font-weight: 500;
+  float: right;
+  display: block;
+  padding: 8px 0;
+  margin: 8px 0;
+  line-height: 1.3;
+  position: relative;
+}
+/* line 170, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul li a:hover:after {
+  width: 100%;
+}
+/* line 173, ../sass/layout/_header.scss */
+.header-xd .head-xd .nav-xd ul li a:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 0;
+  margin: auto;
+  height: 2px;
+  background: #4576a2;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-/* line 2, ../sass/layout/_master-layout.scss */
+/* line 192, ../sass/layout/_header.scss */
+#nav-icon-xd {
+  width: 35px;
+  height: 26px;
+  float: left;
+  position: relative;
+  margin-top: 16px;
+  margin-right: 15px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+/* line 202, ../sass/layout/_header.scss */
+#nav-icon-xd span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #c1c1c1;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+/* line 213, ../sass/layout/_header.scss */
+#nav-icon-xd span:nth-child(1) {
+  top: 0;
+  transform-origin: left center;
+}
+/* line 217, ../sass/layout/_header.scss */
+#nav-icon-xd span:nth-child(2) {
+  top: 10px;
+  transform-origin: left center;
+}
+/* line 221, ../sass/layout/_header.scss */
+#nav-icon-xd span:nth-child(3) {
+  top: 20px;
+  transform-origin: left center;
+}
+/* line 227, ../sass/layout/_header.scss */
+#nav-icon-xd.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -2px;
+  left: 5px;
+}
+/* line 232, ../sass/layout/_header.scss */
+#nav-icon-xd.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+/* line 236, ../sass/layout/_header.scss */
+#nav-icon-xd.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 23px;
+  left: 5px;
+}
+
+@media only screen and (max-width: 991px) {
+  /* line 246, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd ul li:first-child a {
+    padding: 18px 4px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /*for mob hide*/
+  /* line 254, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd ul li:nth-child(n+2),
+  .header-xd .top-strip {
+    display: none;
+  }
+
+  /* line 261, ../sass/layout/_header.scss */
+  .header-xd .head-xd .logo-xd {
+    width: auto;
+  }
+  /* line 263, ../sass/layout/_header.scss */
+  .header-xd .head-xd .logo-xd img {
+    width: 120px;
+  }
+  /* line 268, ../sass/layout/_header.scss */
+  .header-xd .search_top.mob-only {
+    margin-left: 10px;
+  }
+  /* line 270, ../sass/layout/_header.scss */
+  .header-xd .search_top.mob-only i.exd-close {
+    left: 10px;
+    top: 12px;
+  }
+  /* line 275, ../sass/layout/_header.scss */
+  .header-xd .search_top.mob-only .drop-down-xd {
+    background: #fbfbfb;
+  }
+  /* line 278, ../sass/layout/_header.scss */
+  .header-xd .search_top.mob-only .drop-down-xd form input[type="text"] {
+    padding: 14px 10px;
+    background: #fbfbfb;
+  }
+  /* line 282, ../sass/layout/_header.scss */
+  .header-xd .search_top.mob-only .drop-down-xd form button {
+    height: 48px;
+  }
+  /* line 288, ../sass/layout/_header.scss */
+  .header-xd .search_top.mob-only .toggle-xd {
+    padding: 9px;
+  }
+  /* line 292, ../sass/layout/_header.scss */
+  .header-xd .head-xd {
+    width: auto;
+  }
+  /* line 294, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd {
+    float: right;
+    width: auto;
+  }
+  /* line 297, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd ul {
+    padding-left: 0;
+    float: right;
+    width: auto;
+  }
+  /* line 301, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd ul li {
+    width: auto;
+  }
+  /* line 304, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd ul li:first-child a {
+    margin: 0;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* line 318, ../sass/layout/_header.scss */
+  .header-xd .head-xd .nav-xd ul li:first-child a {
+    margin: 0;
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  /* line 323, ../sass/layout/_header.scss */
+  .header-xd .head-xd .logo-xd img {
+    width: 100px;
+  }
+
+  /* line 326, ../sass/layout/_header.scss */
+  #nav-icon-xd {
+    margin-top: 10px;
+  }
+}
+/* line 1, ../sass/layout/_master-layout.scss */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+/* line 5, ../sass/layout/_master-layout.scss */
+.btn-effect {
+  overflow: hidden;
+}
+
+/* line 8, ../sass/layout/_master-layout.scss */
 button {
   font-family: "Titillium Web", sans-serif;
   display: inline-block;
@@ -166,21 +531,21 @@ button {
   border-radius: 5px;
   color: set-button-text-color(#4576a2);
 }
-/* line 86, ../sass/helpers/_mixins.scss */
+/* line 91, ../sass/helpers/_mixins.scss */
 button:hover {
   text-decoration: none;
   background: #3977ae;
 }
-/* line 90, ../sass/helpers/_mixins.scss */
+/* line 95, ../sass/helpers/_mixins.scss */
 button:active {
   outline: none 0px;
 }
-/* line 93, ../sass/helpers/_mixins.scss */
+/* line 98, ../sass/helpers/_mixins.scss */
 button:focus {
   outline: none 0px;
 }
 
-/* line 8, ../sass/layout/_master-layout.scss */
+/* line 14, ../sass/layout/_master-layout.scss */
 .shape {
   width: 0;
   height: 0;
@@ -189,7 +554,7 @@ button:focus {
   position: relative;
   top: -50px;
 }
-/* line 181, ../sass/helpers/_mixins.scss */
+/* line 191, ../sass/helpers/_mixins.scss */
 .shape:after {
   content: '';
   position: absolute;
@@ -201,6 +566,31 @@ button:focus {
   border-top-color: red;
 }
 
+/* line 19, ../sass/layout/_master-layout.scss */
+a {
+  -webkit-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -o-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+}
+/* line 25, ../sass/layout/_master-layout.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 29, ../sass/layout/_master-layout.scss */
+.mob-only {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  /*for mob hide*/
+  /* line 38, ../sass/layout/_master-layout.scss */
+  .mob-only {
+    display: block;
+  }
+}
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
@@ -240,25 +630,25 @@ button {
   text-align: center;
   text-decoration: none;
   font-weight: 600;
-  background: #63a9e8;
+  background: #afafaf;
   overflow: hidden;
   padding: 0;
-  border: none 1px #63a9e8;
+  border: none 1px #afafaf;
   color: #ffffff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 86, ../sass/helpers/_mixins.scss */
+/* line 91, ../sass/helpers/_mixins.scss */
 button:hover {
   text-decoration: none;
-  background: #5aa9f1;
+  background: #b7a7a7;
 }
-/* line 90, ../sass/helpers/_mixins.scss */
+/* line 95, ../sass/helpers/_mixins.scss */
 button:active {
   outline: none 0px;
 }
-/* line 93, ../sass/helpers/_mixins.scss */
+/* line 98, ../sass/helpers/_mixins.scss */
 button:focus {
   outline: none 0px;
 }
@@ -279,7 +669,7 @@ button span:hover {
 .circle {
   display: block;
   position: absolute;
-  background: rgba(0, 0, 0, 0.075);
+  background: rgba(0, 0, 0, 0.085);
   border-radius: 50%;
   transform: scale(0);
 }

@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
     var element, circle, d, x, y;
-    $("button span").click(function (e) {
+    $("button span,.btn-effect").click(function (e) {
 
             element = $(this);
 
@@ -35,6 +35,10 @@ $(document).ready(function () {
     $('.toggle-xd').click(function () {
         $(this).parent('.search_top').toggleClass('open');
     });
+    //for hangberger
+    $('#nav-icon-xd').click(function(){
+		$(this).toggleClass('open');
+	});
 
 
 });
