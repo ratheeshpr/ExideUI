@@ -35,10 +35,13 @@ $(document).ready(function () {
     $('.toggle-xd').click(function () {
         $(this).parent('.search_top').toggleClass('open');
     });
-    //for hangberger
+    //for hangberger animation//res menu
     $('#nav-icon-xd').click(function(){
 		$(this).toggleClass('open');
+        $('.res-menu-outer,.res-menu').toggleClass('open');
 	});
-
+    $('.res-menu-outer,.res-cls').click(function(){
+        $('.res-menu-outer,.res-menu,#nav-icon-xd').removeClass('open');
+    })
 
 });
