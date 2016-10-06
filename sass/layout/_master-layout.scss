@@ -1,42 +1,62 @@
-body{
+body {
     font-family: $brand-font-rob;
     font-size: 14px;
 }
-.btn-effect{
+.btn-effect {
     overflow: hidden;
 }
-button{
-	@include button($btn-darker);
-	@include rounded($border-radius/2);
-	color: set-button-text-color(#4576a2);
+button {
+    @include button($btn-darker);
+    @include rounded($border-radius/2);
+    color: set-button-text-color(#4576a2);
 }
-
-.shape{
-//	@include shape-circle(100px, red);
-//	@include triangle(down, 50px, red);
-	 @include shape-diamond(100px, red);
+.shape {
+    //	@include shape-circle(100px, red);
+    //	@include triangle(down, 50px, red);
+    @include shape-diamond(100px, red);
 }
-a{
+a {
     -webkit-transition: color .3s ease-out;
     -moz-transition: color .3s ease-out;
     -ms-transition: color .3s ease-out;
     -o-transition: color .3s ease-out;
     transition: color .3s ease-out;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
         text-decoration: none;
     }
 }
-.mob-only{
+.mob-only {
     display: none;
 }
-
-
-
-
+.main-content-area {
+    position: fixed;
+    top: 142px;
+    bottom: 86px;
+    left: 0;
+    right: 0;
+    background: #ccc;
+    overflow: auto;
+    padding: 40px 0;
+}
+.min-hgt-content-area {
+    position: relative;
+    min-height: 100%;
+}
+//mob
 @media only screen and (max-width: 767px) {
     /*for mob hide*/
-    .mob-only{
+    .mob-only {
         display: block;
     }
-
+    .main-content-area {
+        bottom: 66px;
+        top: 78px;
+    }
+}
+//smol-mob
+@media only screen and (max-width: 400px) {
+    .main-content-area {
+        top: 70px;
+    }
 }

@@ -1,3 +1,179 @@
-/* Welcome to Compass. Use this file to define print styles.
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* rth footer*/
+.main-footer{
+    background: $clr-black-light;
+    color: $clr-ftr-2;
+    padding-top: 25px;
+    ul.menu-list-3{
+        text-align: center;
+        margin-bottom: 20px;
+        li{
+            display: inline;
+            padding: 0 15px;
+            line-height: 1.7;
+            border-right: 1px solid $clr-ftr-3;
+            &:last-child{
+                border: 0px;
+            }
+            a{
+                color:$clr-ftr-1 ;
+                &:hover{
+                    color: $clr-blue-light;
+                }
+            }
+        }
+    }
+    .footer-copy{
+        background: $clr-black-darker;
+        border-top: 1px solid $clr-ftr-3;
+        color: $clr-ftr-1;
+        ul{
+            border-right: 1px solid $clr-ftr-3;
+            display: table;
+            width: 100%;
+            li{
+                display: table;
+                float: right;
+                padding: 15px 20px;
+                border-left: 1px solid $clr-ftr-3;
+                &:first-child{
+                    float: left;
+                    padding:15px 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid $clr-border-dark;
+    background: $clr-white;
+    padding: 15px 0;
+    .social-fxd {
+        float: left;
+        ul {
+            display: table;
+            margin-left: -20px;
+            li {
+                display: table-cell;
+                padding: 10px 15px;
+                a {
+                    display: block;
+                    padding: 5px;
+                    i {
+                        font-size: 20px;
+                        @include ease-anim();
+                        &.exd-facebook {
+                            color: $clr-facebook;
+                        }
+                        &.exd-in {
+                            color: $clr-in;
+                        }
+                        &.exd-twitter {
+                            color: $clr-twitter;
+                        }
+                        &.exd-you_tube {
+                            color: $clr-you-tube;
+                        }
+                        &.exd-google_pluse {
+                            color: $clr-google-puls;
+                        }
+                        &:hover {
+                            color: $clr_silver_approx;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-fxd-rgt {
+        float: right;
+        ul {
+            display: table;
+            margin-right: -20px;
+            li {
+                padding: 6px 20px;
+                display: table-cell;
+                font-size: 16px;
+                text-align: center;
+                line-height: 1.1;
+                a {
+                    display: block;
+                    color: $clr-blue-darker;
+                    @include ease-anim();
+                    i {
+                        font-size: 25px;
+                        @include ease-anim();
+                    }
+                    span {
+                        display: block;
+                    }
+                    &:hover {
+                        color: $clr_silver_approx;
+                        i {
+                            color: $clr-blue-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mob-menu-fxd-ftr {
+        display: none;
+        ul {
+            display: table;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            li{
+                display: table-cell;
+                a{
+                    color: $clr-white;
+                    display: block;
+                    padding: 4px 0;
+                }
+            }
+        }
+    }
+}
+//lap
+@media only screen and (max-width: 991px) {
+    .footer-fixed {
+        .menu-fxd-rgt ul {
+            margin-right: -10px;
+            li {
+                padding: 6px 10px;
+            }
+        }
+        .social-fxd {
+            ul {
+                margin-left: -10px;
+                li {
+                    padding: 10px 5px;
+                }
+            }
+        }
+    }
+}
+//mob
+@media only screen and (max-width: 767px) {
+    .footer-fixed .social-fxd,
+    .footer-fixed .menu-fxd-rgt {
+        display: none;
+    }
+    .footer-fixed {
+        background: $clr-blue-dark-1;
+        border: 1px solid $clr-blue-dark-1;
+        padding: 10px 15px;
+        .mob-menu-fxd-ftr{
+            display: block;
+        }
+    }
+}
+//smol-mob
+//@media only screen and (max-width: 400px) {
+//
+//}
