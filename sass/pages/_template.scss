@@ -8,6 +8,7 @@
 }
 
 .box-default{
+	@extend .box;
 	background: $clr-white;
 }
 
@@ -17,7 +18,11 @@
 	*{
 		color: $clr-white;
 	}
+	h2{
+		font-size: 1.5em;
+	}
 	button{
-		border: solid 1px $clr-white;
+		border: solid 1px $clr-white !important;
+		@include button(transparent);
 	}
 }

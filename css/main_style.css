@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -46,8 +47,15 @@ header{ @include default-box(#666, block, 10px); }
 /*************************
 12. Mixin - ease-out
 *************************/
+/*************************
+13. Mixin - Box Sizing
+*************************/
+/*************************
+14. Mixin - Transition
+*************************/
+/* @include transition(all,2s,ease-out); */
 /* line 1, ../sass/base/_reset.scss */
-dl, ol, ul {
+dl, ol, ul, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
@@ -55,24 +63,7 @@ dl, ol, ul {
 1. Font Embedding
 *************************/
 /*1. @include font-face(Samplinal, fonts/Samplinal, 500, normal, eot woff2 woff);*/
-/* line 8, ../sass/base/_typography.scss */
-h1 {
-  color: red;
-  text-align: center;
-  -webkit-border-radius: 3em;
-  -moz-border-radius: 3em;
-  border-radius: 3em;
-}
-@font-face {
-  /* line 8, ../sass/base/_typography.scss */
-  h1 {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 600;
-    src: url("../fonts/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
-  }
-}
-/* line 14, ../sass/base/_typography.scss */
+/* line 12, ../sass/base/_typography.scss */
 button {
   font-family: "Titillium Web", sans-serif;
   display: inline-block;
@@ -86,12 +77,12 @@ button {
   padding: 0;
   border: none 1px #fff;
   color: #ffffff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 @font-face {
-  /* line 14, ../sass/base/_typography.scss */
+  /* line 12, ../sass/base/_typography.scss */
   button {
     font-family: "Titillium Web";
     font-style: normal;
@@ -99,21 +90,21 @@ button {
     src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg");
   }
 }
-/* line 91, ../sass/helpers/_mixins.scss */
+/* line 89, ../sass/helpers/_mixins.scss */
 button:hover {
   text-decoration: none;
   background: white;
 }
-/* line 95, ../sass/helpers/_mixins.scss */
+/* line 93, ../sass/helpers/_mixins.scss */
 button:active {
   outline: none 0px;
 }
-/* line 98, ../sass/helpers/_mixins.scss */
+/* line 96, ../sass/helpers/_mixins.scss */
 button:focus {
   outline: none 0px;
 }
 @font-face {
-  /* line 17, ../sass/base/_typography.scss */
+  /* line 15, ../sass/base/_typography.scss */
   button span {
     font-family: "Titillium Web";
     font-style: normal;
@@ -121,6 +112,555 @@ button:focus {
     src: url("../fonts/TitilliumWeb-Regular.eot?") format("eot"), url("../fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../fonts/TitilliumWeb-Regular.woff") format("woff"), url("../fonts/TitilliumWeb-Regular.svg#Titillium_Web") format("svg");
   }
 }
+/*********/
+/***********************************
+1. Icon variables
+2. Icon Styles
+************************************/
+/***********************************
+		1. Icon variables
+************************************/
+/***********************************
+		2. Icon Styles
+************************************/
+@font-face {
+  font-family: 'exide_icons';
+  src: url("../fonts/exide_icons.eot?mnd21y");
+  src: url("../fonts/exide_icons.eot?mnd21y#iefix") format("embedded-opentype"), url("../fonts/exide_icons.ttf?mnd21y") format("truetype"), url("../fonts/exide_icons.woff?mnd21y") format("woff"), url("../fonts/exide_icons.svg?mnd21y#exide_icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 122, ../sass/base/_icon.scss */
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'exide_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 138, ../sass/base/_icon.scss */
+.exd-apple:before {
+  content: "";
+}
+
+/* line 143, ../sass/base/_icon.scss */
+.exd-award:before {
+  content: "";
+}
+
+/* line 148, ../sass/base/_icon.scss */
+.exd-bag:before {
+  content: "";
+}
+
+/* line 153, ../sass/base/_icon.scss */
+.exd-box:before {
+  content: "";
+}
+
+/* line 158, ../sass/base/_icon.scss */
+.exd-box_02:before {
+  content: "";
+}
+
+/* line 163, ../sass/base/_icon.scss */
+.exd-calculator:before {
+  content: "";
+}
+
+/* line 168, ../sass/base/_icon.scss */
+.exd-calender:before {
+  content: "";
+}
+
+/* line 173, ../sass/base/_icon.scss */
+.exd-calender_01:before {
+  content: "";
+}
+
+/* line 178, ../sass/base/_icon.scss */
+.exd-call:before {
+  content: "";
+}
+
+/* line 183, ../sass/base/_icon.scss */
+.exd-chat:before {
+  content: "";
+}
+
+/* line 188, ../sass/base/_icon.scss */
+.exd-close:before {
+  content: "";
+}
+
+/* line 193, ../sass/base/_icon.scss */
+.exd-close_box:before {
+  content: "";
+}
+
+/* line 198, ../sass/base/_icon.scss */
+.exd-close_round .path1:before {
+  content: "";
+  color: #5d5e5e;
+}
+
+/* line 204, ../sass/base/_icon.scss */
+.exd-close_round .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+
+/* line 211, ../sass/base/_icon.scss */
+.exd-doctor:before {
+  content: "";
+}
+
+/* line 216, ../sass/base/_icon.scss */
+.exd-down:before {
+  content: "";
+}
+
+/* line 221, ../sass/base/_icon.scss */
+.exd-down_box:before {
+  content: "";
+}
+
+/* line 226, ../sass/base/_icon.scss */
+.exd-facebook:before {
+  content: "";
+}
+
+/* line 231, ../sass/base/_icon.scss */
+.exd-google_pluse:before {
+  content: "";
+}
+
+/* line 236, ../sass/base/_icon.scss */
+.exd-graph:before {
+  content: "";
+}
+
+/* line 241, ../sass/base/_icon.scss */
+.exd-hand:before {
+  content: "";
+}
+
+/* line 246, ../sass/base/_icon.scss */
+.exd-hand_01:before {
+  content: "";
+}
+
+/* line 251, ../sass/base/_icon.scss */
+.exd-hand_02:before {
+  content: "";
+}
+
+/* line 256, ../sass/base/_icon.scss */
+.exd-hand_03:before {
+  content: "";
+}
+
+/* line 261, ../sass/base/_icon.scss */
+.exd-hand_04:before {
+  content: "";
+}
+
+/* line 266, ../sass/base/_icon.scss */
+.exd-in:before {
+  content: "";
+}
+
+/* line 271, ../sass/base/_icon.scss */
+.exd-info_01:before {
+  content: "";
+}
+
+/* line 276, ../sass/base/_icon.scss */
+.exd-info_02:before {
+  content: "";
+}
+
+/* line 281, ../sass/base/_icon.scss */
+.exd-leaf:before {
+  content: "";
+}
+
+/* line 286, ../sass/base/_icon.scss */
+.exd-left:before {
+  content: "";
+}
+
+/* line 291, ../sass/base/_icon.scss */
+.exd-light:before {
+  content: "";
+}
+
+/* line 296, ../sass/base/_icon.scss */
+.exd-love:before {
+  content: "";
+}
+
+/* line 301, ../sass/base/_icon.scss */
+.exd-love_hand:before {
+  content: "";
+}
+
+/* line 306, ../sass/base/_icon.scss */
+.exd-mail:before {
+  content: "";
+}
+
+/* line 311, ../sass/base/_icon.scss */
+.exd-man_01:before {
+  content: "";
+}
+
+/* line 316, ../sass/base/_icon.scss */
+.exd-man_02 .path1:before {
+  content: "";
+  color: #1d3d72;
+}
+
+/* line 322, ../sass/base/_icon.scss */
+.exd-man_02 .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ec2427;
+}
+
+/* line 329, ../sass/base/_icon.scss */
+.exd-man_02 .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #1d3d72;
+}
+
+/* line 336, ../sass/base/_icon.scss */
+.exd-man_03:before {
+  content: "";
+}
+
+/* line 341, ../sass/base/_icon.scss */
+.exd-map:before {
+  content: "";
+}
+
+/* line 346, ../sass/base/_icon.scss */
+.exd-medical:before {
+  content: "";
+}
+
+/* line 351, ../sass/base/_icon.scss */
+.exd-money_01:before {
+  content: "";
+}
+
+/* line 356, ../sass/base/_icon.scss */
+.exd-money_02:before {
+  content: "";
+}
+
+/* line 361, ../sass/base/_icon.scss */
+.exd-money_03 .path1:before {
+  content: "";
+  color: #003975;
+}
+
+/* line 367, ../sass/base/_icon.scss */
+.exd-money_03 .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ed1c24;
+}
+
+/* line 374, ../sass/base/_icon.scss */
+.exd-money_03 .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 381, ../sass/base/_icon.scss */
+.exd-money_03 .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 388, ../sass/base/_icon.scss */
+.exd-mouse:before {
+  content: "";
+}
+
+/* line 393, ../sass/base/_icon.scss */
+.exd-news:before {
+  content: "";
+}
+
+/* line 398, ../sass/base/_icon.scss */
+.exd-note:before {
+  content: "";
+}
+
+/* line 403, ../sass/base/_icon.scss */
+.exd-note_01:before {
+  content: "";
+}
+
+/* line 408, ../sass/base/_icon.scss */
+.exd-note_02:before {
+  content: "";
+}
+
+/* line 413, ../sass/base/_icon.scss */
+.exd-note_03:before {
+  content: "";
+}
+
+/* line 418, ../sass/base/_icon.scss */
+.exd-note_04:before {
+  content: "";
+}
+
+/* line 423, ../sass/base/_icon.scss */
+.exd-note_05:before {
+  content: "";
+}
+
+/* line 428, ../sass/base/_icon.scss */
+.exd-note_search:before {
+  content: "";
+}
+
+/* line 433, ../sass/base/_icon.scss */
+.exd-pdf:before {
+  content: "";
+}
+
+/* line 438, ../sass/base/_icon.scss */
+.exd-people .path1:before {
+  content: "";
+  color: #003975;
+}
+
+/* line 444, ../sass/base/_icon.scss */
+.exd-people .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #ed1c24;
+}
+
+/* line 451, ../sass/base/_icon.scss */
+.exd-people .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 458, ../sass/base/_icon.scss */
+.exd-people .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 465, ../sass/base/_icon.scss */
+.exd-people .path5:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 472, ../sass/base/_icon.scss */
+.exd-people .path6:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 479, ../sass/base/_icon.scss */
+.exd-people .path7:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 486, ../sass/base/_icon.scss */
+.exd-people .path8:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 493, ../sass/base/_icon.scss */
+.exd-people .path9:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 500, ../sass/base/_icon.scss */
+.exd-people .path10:before {
+  content: "";
+  margin-left: -1em;
+  color: #003975;
+}
+
+/* line 507, ../sass/base/_icon.scss */
+.exd-peoples_01:before {
+  content: "";
+}
+
+/* line 512, ../sass/base/_icon.scss */
+.exd-peoples_02:before {
+  content: "";
+}
+
+/* line 517, ../sass/base/_icon.scss */
+.exd-percent_box:before {
+  content: "";
+}
+
+/* line 522, ../sass/base/_icon.scss */
+.exd-phone:before {
+  content: "";
+}
+
+/* line 527, ../sass/base/_icon.scss */
+.exd-play:before {
+  content: "";
+}
+
+/* line 532, ../sass/base/_icon.scss */
+.exd-play_round:before {
+  content: "";
+}
+
+/* line 537, ../sass/base/_icon.scss */
+.exd-right:before {
+  content: "";
+}
+
+/* line 542, ../sass/base/_icon.scss */
+.exd-right_arrow:before {
+  content: "";
+}
+
+/* line 547, ../sass/base/_icon.scss */
+.exd-right_round:before {
+  content: "";
+}
+
+/* line 552, ../sass/base/_icon.scss */
+.exd-round_box .path1:before {
+  content: "";
+  color: #1d3d72;
+}
+
+/* line 558, ../sass/base/_icon.scss */
+.exd-round_box .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #1d3d72;
+}
+
+/* line 565, ../sass/base/_icon.scss */
+.exd-round_box .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: #1d3d72;
+}
+
+/* line 572, ../sass/base/_icon.scss */
+.exd-round_box .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: #ec2427;
+}
+
+/* line 579, ../sass/base/_icon.scss */
+.exd-savings:before {
+  content: "";
+}
+
+/* line 584, ../sass/base/_icon.scss */
+.exd-search:before {
+  content: "";
+}
+
+/* line 589, ../sass/base/_icon.scss */
+.exd-settings:before {
+  content: "";
+}
+
+/* line 594, ../sass/base/_icon.scss */
+.exd-son:before {
+  content: "";
+}
+
+/* line 599, ../sass/base/_icon.scss */
+.exd-star:before {
+  content: "";
+}
+
+/* line 604, ../sass/base/_icon.scss */
+.exd-star_fill:before {
+  content: "";
+}
+
+/* line 609, ../sass/base/_icon.scss */
+.exd-tax:before {
+  content: "";
+}
+
+/* line 614, ../sass/base/_icon.scss */
+.exd-tick_01:before {
+  content: "";
+}
+
+/* line 619, ../sass/base/_icon.scss */
+.exd-tick_02:before {
+  content: "";
+}
+
+/* line 624, ../sass/base/_icon.scss */
+.exd-tour:before {
+  content: "";
+}
+
+/* line 629, ../sass/base/_icon.scss */
+.exd-twitter:before {
+  content: "";
+}
+
+/* line 634, ../sass/base/_icon.scss */
+.exd-umbrella_02:before {
+  content: "";
+}
+
+/* line 639, ../sass/base/_icon.scss */
+.exd-umbrlla_01:before {
+  content: "";
+}
+
+/* line 644, ../sass/base/_icon.scss */
+.exd-video:before {
+  content: "";
+}
+
+/* line 649, ../sass/base/_icon.scss */
+.exd-you_tube:before {
+  content: "";
+}
+
 /***********************************
 ***** PRE HEADER - TOP LINKS ******
 ***********************************/
@@ -304,9 +844,9 @@ button:focus {
   padding: 18px 19px;
   background: #ed1c24;
   color: #ffffff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
@@ -523,24 +1063,24 @@ button {
   padding: 0;
   border: none 1px #4576a2;
   color: #ffffff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-border-radius: 2.5px;
+  -moz-border-radius: 2.5px;
+  border-radius: 2.5px;
   color: set-button-text-color(#4576a2);
 }
-/* line 91, ../sass/helpers/_mixins.scss */
+/* line 89, ../sass/helpers/_mixins.scss */
 button:hover {
   text-decoration: none;
   background: #3977ae;
 }
-/* line 95, ../sass/helpers/_mixins.scss */
+/* line 93, ../sass/helpers/_mixins.scss */
 button:active {
   outline: none 0px;
 }
-/* line 98, ../sass/helpers/_mixins.scss */
+/* line 96, ../sass/helpers/_mixins.scss */
 button:focus {
   outline: none 0px;
 }
@@ -554,7 +1094,7 @@ button:focus {
   position: relative;
   top: -50px;
 }
-/* line 191, ../sass/helpers/_mixins.scss */
+/* line 189, ../sass/helpers/_mixins.scss */
 .shape:after {
   content: '';
   position: absolute;
@@ -635,20 +1175,20 @@ button {
   padding: 0;
   border: none 1px #afafaf;
   color: #ffffff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 91, ../sass/helpers/_mixins.scss */
+/* line 89, ../sass/helpers/_mixins.scss */
 button:hover {
   text-decoration: none;
   background: #b7a7a7;
 }
-/* line 95, ../sass/helpers/_mixins.scss */
+/* line 93, ../sass/helpers/_mixins.scss */
 button:active {
   outline: none 0px;
 }
-/* line 98, ../sass/helpers/_mixins.scss */
+/* line 96, ../sass/helpers/_mixins.scss */
 button:focus {
   outline: none 0px;
 }
@@ -684,4 +1224,72 @@ button span:hover {
     transform: scale(2.5);
   }
 }
-/* Pages: Our Products*/
+/*Home page components*/
+/* line 3, ../sass/pages/_template.scss */
+.box, .box-default, .box-blue {
+  border: 0px none;
+  clear: both;
+  display: block;
+  margin: 0;
+  padding: 1.5em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 5px rgba(64, 64, 64, 0.25);
+  -moz-box-shadow: 0px 0px 5px rgba(64, 64, 64, 0.25);
+  box-shadow: 0px 0px 5px rgba(64, 64, 64, 0.25);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 10, ../sass/pages/_template.scss */
+.box-default {
+  background: #ffffff;
+}
+
+/* line 15, ../sass/pages/_template.scss */
+.box-blue {
+  background: #4576a2;
+}
+/* line 18, ../sass/pages/_template.scss */
+.box-blue * {
+  color: #ffffff;
+}
+/* line 21, ../sass/pages/_template.scss */
+.box-blue h2 {
+  font-size: 1.5em;
+}
+/* line 24, ../sass/pages/_template.scss */
+.box-blue button {
+  border: solid 1px #ffffff !important;
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  outline: none 0px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  background: transparent;
+  overflow: hidden;
+  padding: 0;
+  border: none 1px transparent;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 89, ../sass/helpers/_mixins.scss */
+.box-blue button:hover {
+  text-decoration: none;
+  background: transparent;
+}
+/* line 93, ../sass/helpers/_mixins.scss */
+.box-blue button:active {
+  outline: none 0px;
+}
+/* line 96, ../sass/helpers/_mixins.scss */
+.box-blue button:focus {
+  outline: none 0px;
+}
