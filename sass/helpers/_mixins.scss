@@ -216,7 +216,8 @@ header{ @include default-box(#666, block, 10px); }
     clear: both;
     display: $box-model;
     margin: 0;
-    padding: $padding-default;
+    padding: 1.5*$padding-default;
+	 width: 100%;
 }
 
 /*************************
