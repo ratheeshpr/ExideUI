@@ -8,6 +8,27 @@
 //h1{
 //	@include font-face('Roboto','../fonts/Roboto-Bold' , 600, normal, eot woff2 woff);
 //}
+h1{
+	font-size: 48px;
+	@include font-face('Titillium Web','../fonts/TitilliumWeb-Regular' , 600, normal, eot woff2 woff svg);
+}
+h2{
+	font-size: 32px;
+	@include font-face('Titillium Web','../fonts/TitilliumWeb-Regular' , 600, normal, eot woff2 woff svg);
+}
+h3{
+	font-size: 28px;
+}
+h4{
+	font-size: 24px;
+}
+h5{
+	font-size: 22px;
+}
+h6{
+	font-size: 18px;
+}
+
 
 button{
 	@include font-face('Titillium Web','../fonts/TitilliumWeb-Regular' , 600, normal, eot woff2 woff svg);
