@@ -44,7 +44,6 @@
 			width: 50%;
 		}
 		.box-content{
-			padding-left: $padding-default;
 			h5{
 				color: $clr-blue-darker;
 				line-height: 2*$base-font;
@@ -54,6 +53,38 @@
 				color: $clr-blue-light;
 				margin-top: $padding-default;
 			}
+			ul.list-none{
+				list-style-type: none;
+				i{
+					margin-right: 1/2*$padding-default;
+				}
+				li{
+					margin-bottom: $padding-default;
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+				.text-highlight{
+					font-weight: bold;
+					color: $clr-blue-darker;
+					margin-top: $padding-default;
+				}
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.min-hgt-content-area{
+		.box-default{
+			.box-img{
+				width: 100%;
+			}
+			.box-float{
+				width: 100%;
+			}
 		}
 	}
 }
+
