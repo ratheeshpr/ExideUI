@@ -36,12 +36,56 @@ $(document).ready(function () {
         $(this).parent('.search_top').toggleClass('open');
     });
     //for hangberger animation//res menu
-    $('#nav-icon-xd').click(function(){
-		$(this).toggleClass('open');
+    $('#nav-icon-xd').click(function () {
+        $(this).toggleClass('open');
         $('.res-menu-outer,.res-menu').toggleClass('open');
-	});
-    $('.res-menu-outer,.res-cls').click(function(){
+    });
+    $('.res-menu-outer,.res-cls').click(function () {
         $('.res-menu-outer,.res-menu,#nav-icon-xd').removeClass('open');
     })
+    $('.toggle-footer-tab').click(function () {
+        $('.footer-tab').slideToggle();
+        $("html, body").animate({
+            scrollTop: $(document).height() + 1500
+        }, "slow");
+        $(this).toggleClass('open')
+    });
+    $('.close-ftr').click(function () {
+        $('.footer-tab').slideToggle();
+        $('.toggle-footer-tab').toggleClass('open')
+    });
+
+
+    //slider Tools &Calculators
+    $('.tools-calculators').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        items:1,
+        dots:false,
+         navText: ["<i class='exd-left'></i>", "<i class='exd-right'></i>"],
+    })
+    //slider Serving
+    $('.serving-slider').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots:false,
+        items:1,
+         navText: ["<i class='exd-left'></i>", "<i class='exd-right'></i>"],
+    })
+    //slider News
+    $('.news-slider').owlCarousel({
+        loop: true,
+        margin: 0,
+        items:1,
+        nav:false,
+        autoplay:true,
+    })
+    //
+    $('.sub-menu-toggle').click(function(){
+        $(this).siblings('ul').slideToggle();
+    });
+    $('.sub-menu-toggle').siblings('ul').hide();
 
 });

@@ -79,7 +79,7 @@ $inset: false) {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font-weight: $text-bold;
+    font-weight: $text-weight-bold;
     background: $color;
     overflow: hidden;
     padding: 0;
@@ -253,3 +253,23 @@ header{ @include default-box(#666, block, 10px); }
     -o-transition:      $what $time $how;
     transition:         $what $time $how;
 }
+
+/*************************
+14. Mixin - Transform top
+*************************/
+
+/* @include transition(all,2s,ease-out); */
+@mixin transform-top($value:-50%) {
+//    -webkit-transition: $what $time $how;
+//    -moz-transition:    $what $time $how;
+//    -ms-transition:     $what $time $how;
+//    -o-transition:      $what $time $how;
+//    transition:         $what $time $how;
+    -moz-transform: translateY($value);
+    -webkit-transform: translateY($value);
+    -o-transform: translateY($value);
+    -ms-transform: translateY($value);
+    transform: translateY($value);
+}
+
+

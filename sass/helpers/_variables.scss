@@ -22,6 +22,7 @@ $clr-grey-darker: #3e3e3e;
 $clr-ftr-1: #f9f9f9;
 $clr-ftr-2: #828282;
 $clr-ftr-3: #484848;
+$clr-ftr-4: #363636;
 
 
 $clr-facebook: #3b5998;
@@ -31,6 +32,7 @@ $clr-you-tube: #cd201f;
 $clr-google-puls: #db402c;
 
 $clr-border-lighter: #deebf6;
+$clr-border-light: #c7d6e3;
 $clr-border-dark: #d7d7d7;
 
 $clr-red: #ed1c24;
@@ -64,17 +66,23 @@ $tbl-light: #e8f5fc;
 $brand-font-rob: 'Roboto', sans-serif;
 $brand-font-neo: 'Titillium Web', sans-serif;
 
-$text-light: 300;
-$text-regular: 400;
-$text-medium: 500;
-$text-bold: 600;
-$text-bolder: 700;
+$text-weight-light: 300;
+$text-weight-regular: 400;
+$text-weight-medium: 500;
+$text-weight-bold: 600;
+$text-weight-bolder: 700;
+
+$text-size-light: 12px;;
+$text-size-regular: 14px;
+$text-size-medium: 17px;
+$text-size-bold: 20px;
+$text-size-bolder: 25px;
+
 
 /*7. Border*/
 
 $border-width: 1px;
-$border-radius: 5px;
-
+$border-radius: 4px;
 
 /*8. Spacer*/
 

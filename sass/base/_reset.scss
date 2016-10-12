@@ -1,3 +1,10 @@
 dl, ol, ul{
 	margin-bottom: 0;
 }
+.owl-theme .owl-dots .owl-dot span{
+    margin: 0px 7px;
+    background: #dae4ec;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #8fadc7;
+}
